@@ -21,18 +21,18 @@ export default function Home() {
               </a>{" "}
               by tony hsieh when i was 13.
             </p>
-            <p className="mb-4 leading-none">I am originally from jakarta and surabaya, indonesia. would love to talk more if your in the geo/aeo space!</p>
+            <p className="mb-4 leading-none">I am originally from jakarta and surabaya, indonesia, would love to talk if your working on generative/agentic engine optimization!</p>
 
-            <h2 className="text-[18px] font-bold mt-0 mb-1 leading-none">contacts</h2>
+            <h2 className="text-[18px] font-bold mt-0 mb-1 leading-none">Contacts</h2>
             <div className="mt-1 mb-4">
               <a href="https://www.linkedin.com/in/wrjodjana/" target="_blank" rel="noopener noreferrer" className="block mb-1 leading-none text-[#0000ee] underline">
-                linkedin
+                Linkedin
               </a>
               <a href="mailto:jodjanawarren@gmail.com" className="block mb-1 leading-none text-[#0000ee] underline">
-                email
+                Email
               </a>
               <a href="https://github.com/wrjodjana" target="_blank" rel="noopener noreferrer" className="block mb-1 leading-none text-[#0000ee] underline">
-                github
+                Github
               </a>
             </div>
           </div>

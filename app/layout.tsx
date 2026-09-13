@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Geist } from "next/font/google";
 import "./globals.css";
 
-const quattro = localFont({
-  src: [
-    { path: "./fonts/iAWriterQuattroS-Regular.woff2", weight: "400", style: "normal" },
-    { path: "./fonts/iAWriterQuattroS-Italic.woff2", weight: "400", style: "italic" },
-    { path: "./fonts/iAWriterQuattroS-Bold.woff2", weight: "700", style: "normal" },
-    { path: "./fonts/iAWriterQuattroS-BoldItalic.woff2", weight: "700", style: "italic" },
-  ],
-  variable: "--font-quattro",
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
 });
 
 export const metadata: Metadata = {
@@ -24,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${quattro.variable} antialiased`}>{children}</body>
+      <body className={`${geist.variable} antialiased`}>{children}</body>
     </html>
   );
 }

@@ -6,7 +6,6 @@ export type Post = {
   slug: string;
   title: string;
   date: string; // YYYY-MM-DD
-  tag: string;
   content: string; // markdown body
 };
 
@@ -21,7 +20,6 @@ function readPost(filename: string): Post {
     slug,
     title: String(data.title ?? slug),
     date,
-    tag: String(data.tag ?? ""),
     content: content.trim(),
   };
 }

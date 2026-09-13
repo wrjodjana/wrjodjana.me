@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Nav from "../../components/Nav";
-import Tag from "../Tag";
 import Toc from "../Toc";
 import { getPost, getPosts, getHeadings, formatDate, slugify } from "../posts";
 
@@ -44,7 +43,6 @@ export default async function PostPage({ params }: Params) {
             <h1 className="text-[1.5rem] mb-3 mt-0 leading-tight font-bold">{post.title}</h1>
             <div className="flex items-center gap-2.5 mb-10">
               <span className="text-[14px] text-[#555] leading-none">{formatDate(post.date)}</span>
-              <Tag>{post.tag}</Tag>
             </div>
 
             <div className="post">

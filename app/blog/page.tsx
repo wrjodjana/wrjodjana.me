@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "../components/Nav";
-import Tag from "./Tag";
 import { getPosts, formatDate } from "./posts";
 
 export const metadata: Metadata = {
@@ -32,7 +31,6 @@ export default function Blog() {
                     </Link>
                     <div className="flex items-center gap-2.5 mt-2 text-[14px] text-[#555] leading-none">
                       <span>{formatDate(post.date)}</span>
-                      <Tag>{post.tag}</Tag>
                     </div>
                   </li>
                 ))}
