@@ -1,5 +1,5 @@
 ---
-title: does the npm registry stop an agent from installing the wrong package?
+title: Does the npm registry stop an agent from installing the wrong package?
 date: 2026-08-25
 ---
 

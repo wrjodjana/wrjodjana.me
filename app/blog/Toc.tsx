@@ -31,18 +31,14 @@ export default function Toc({ headings }: { headings: Heading[] }) {
 
   if (headings.length === 0) return null;
   return (
-    <nav className="hidden xl:block flex-shrink-0 self-start sticky top-10 leading-none whitespace-nowrap">
-      {headings.map((h) => (
-        <a
-          key={h.id}
-          href={`#${h.id}`}
-          className={`block mb-2 text-[14px] leading-none hover:underline ${
-            h.id === active ? "text-black font-bold" : "text-[#555]"
-          }`}
-        >
-          {h.text}
-        </a>
-      ))}
-    </nav>
+    <div className="toc-wrap">
+      <nav className="toc" aria-label="Table of contents">
+        {headings.map((h) => (
+          <a key={h.id} href={`#${h.id}`} aria-current={h.id === active ? "location" : undefined}>
+            {h.text}
+          </a>
+        ))}
+      </nav>
+    </div>
   );
 }
