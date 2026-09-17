@@ -195,6 +195,7 @@ small {
 .essay-list li {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   gap: 24px;
   padding: 0.85rem 0;
   border-bottom: 1px solid #ddd;
@@ -204,8 +205,20 @@ small {
   border-top: 1px solid #ddd;
 }
 
+.essay-list a {
+  color: #222;
+  text-decoration: none;
+  text-wrap: pretty;
+}
+
+.essay-list a:hover {
+  color: #0645ad;
+  text-decoration: underline;
+}
+
 .essay-list small {
   flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
 }
 
 footer {
@@ -387,6 +400,12 @@ footer p {
 
   .sidebar a {
     text-decoration: underline;
+  }
+
+  .essay-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
   }
 }
 
