@@ -13,7 +13,7 @@ export default function Home() {
 
       <section id="about">
         <h2>About me</h2>
-        <p>I work full-time in Seattle but I’m also focused on Agentic Engine Optimization, specifically researching which sources agents pick dependencies from.</p>
+        <p>I work full-time in Seattle but I've recently started researching on Agentic Engine Optimization, specifically on which sources agents pick dependencies from.</p>
 
         <p>
           I studied Computer Science and Statistics at UIUC. During my time at Illinois, I was part of the <a href="https://uq.cee.illinois.edu/">Uncertainty Quantification Group</a> and{" "}

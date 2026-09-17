@@ -36,7 +36,7 @@ export default async function PostPage({ params }: Params) {
     <article className="article">
       <header className="page-header">
         <h1>{post.title}</h1>
-        <p>{formatDate(post.date)} by Warren Jodjana</p>
+        <p>{formatDate(post.date)}</p>
       </header>
 
       <div className="post">
