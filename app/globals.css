@@ -327,9 +327,28 @@ footer p {
   margin: 2rem 0;
 }
 
-.post img {
+.post img,
+.post video {
   max-width: 100%;
   height: auto;
+}
+
+.post video {
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* caption paragraph directly below an image */
+.post p:has(> img),
+.post p:has(> video) {
+  margin-bottom: 0.5rem;
+}
+
+.post p:has(> img) + p,
+.post p:has(> video) + p {
+  color: #666;
+  font-size: 0.85rem;
 }
 
 /* table of contents, shown beside the article on wide screens */

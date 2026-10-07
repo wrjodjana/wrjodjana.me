@@ -51,6 +51,19 @@ export default async function PostPage({ params }: Params) {
                 </h2>
               );
             },
+            p: ({ node, children, ...props }) => {
+              const only = node?.children.length === 1 ? node.children[0] : undefined;
+              const src = only?.type === "element" && only.tagName === "img" ? only.properties.src : undefined;
+              if (typeof src === "string" && /\.(mp4|webm)$/i.test(src)) {
+                const alt = only?.type === "element" ? String(only.properties.alt ?? "") : "";
+                return (
+                  <p {...props}>
+                    <video src={src} aria-label={alt} controls muted playsInline preload="metadata" />
+                  </p>
+                );
+              }
+              return <p {...props}>{children}</p>;
+            },
             table: ({ node, ...props }) => {
               void node;
               return (
