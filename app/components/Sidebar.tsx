@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 
 const primaryLinks = [
   { id: "about", href: "/#about", label: "About" },
-  { id: "blog", href: "/blog", label: "Blog" },
 ];
 
 const socialLinks = [
@@ -16,7 +15,7 @@ const socialLinks = [
 
 export default function Sidebar() {
   const pathname = usePathname();
-  const current = pathname.startsWith("/blog") ? "blog" : "about";
+  const current = pathname === "/" ? "about" : undefined;
 
   return (
     <aside className="sidebar">

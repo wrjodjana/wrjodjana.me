@@ -1,6 +1,6 @@
 # [wrjodjana.me](https://wrjodjana.me)
 
-My personal website and blog.
+My personal website.
 
 ## Stack
 
@@ -25,6 +25,8 @@ Then open [http://localhost:3000](http://localhost:3000).
 
 ## Writing a post
 
+The blog is hidden from the site for now. Its code lives in `app/_blog/`, and the `_` prefix keeps it out of routing. To bring it back, rename the folder to `app/blog/` and add the Blog link back to the sidebar.
+
 Add a Markdown file to `content/posts/`. The file name becomes the URL slug.
 
 ```md
@@ -43,7 +45,7 @@ Top-level `#` headings make the table of contents.
 ```
 app/
   page.tsx          # home page
-  blog/             # blog index, post pages, table of contents
+  _blog/            # hidden blog: index, post pages, table of contents
   components/       # sidebar
 content/posts/      # blog posts in Markdown
 public/             # images, videos, robots.txt
